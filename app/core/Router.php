@@ -43,6 +43,9 @@ class Router
         if ($this->match()){
             echo "Route matched";
         }
+        else{
+            echo 'Route is not exist';
+        }
     }
 
 }
