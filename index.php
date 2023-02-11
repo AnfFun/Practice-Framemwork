@@ -7,4 +7,6 @@ use app\core\Router;
 
 
 $rout = new Router();
+$rout->load();
 $rout->run();
+
