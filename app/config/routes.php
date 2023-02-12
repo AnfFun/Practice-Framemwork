@@ -3,14 +3,14 @@
 return [
 
     'genres' => [
-        'controller' => 'Genre',
+        'controller' => 'Genres',
         'action' => 'genrePage'
     ],
     'visitors' => [
         'controller' => 'Visitors',
-        'action' => 'VisitorsPage'
+        'action' => 'visitorsPage'
     ],
-    'main' => [
+    '' => [
         'controller' => 'Main',
         'action' => 'home'
     ],

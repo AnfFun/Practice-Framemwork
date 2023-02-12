@@ -6,9 +6,10 @@ use app\core\Controller;
 
 class VisitorsController extends Controller
 {
-    public function VisitorsPageAction()
+    public function visitorsPageAction()
     {
-        echo 'Visitor List: ';
+        $this->view->render('Visitors List');
+
 
 
     }

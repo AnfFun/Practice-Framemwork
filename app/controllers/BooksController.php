@@ -8,8 +8,6 @@ class BooksController extends Controller
 {
     public function booksPageAction()
     {
-        echo 'Books List: ';
-
-
+        $this->view->render('List of Books');
     }
 }

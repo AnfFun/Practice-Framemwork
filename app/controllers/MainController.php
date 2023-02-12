@@ -8,6 +8,7 @@ class MainController extends Controller
 {
     public function homeAction()
     {
-        echo '<p style="text-align: center;font-size: 32px">MAIN PAGE</p>';
+        $this->view->render('Home');
+//        echo '<p style="text-align: center;font-size: 32px">MAIN PAGE</p>';
     }
 }
