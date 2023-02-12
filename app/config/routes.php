@@ -10,5 +10,9 @@ return [
         'controller' => 'Visitors',
         'action' => 'show'
     ],
+    'main' => [
+        'controller' => 'Main',
+        'action' => 'home'
+    ]
 
 ];
