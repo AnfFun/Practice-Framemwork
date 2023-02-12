@@ -6,7 +6,7 @@ use app\core\Controller;
 
 class VisitorsController extends Controller
 {
-    public function showAction()
+    public function VisitorsPageAction()
     {
         echo 'Visitor List: ';
 

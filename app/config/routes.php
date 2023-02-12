@@ -2,17 +2,25 @@
 
 return [
 
-    'genre/show' => [
+    'genres' => [
         'controller' => 'Genre',
-        'action' => 'show'
+        'action' => 'genrePage'
     ],
-    'visitors/show' => [
+    'visitors' => [
         'controller' => 'Visitors',
-        'action' => 'show'
+        'action' => 'VisitorsPage'
     ],
     'main' => [
         'controller' => 'Main',
         'action' => 'home'
+    ],
+    'books' => [
+        'controller' => 'Books',
+        'action' => 'booksPage'
+    ],
+    'records' => [
+        'controller' => 'Records',
+        'action' => 'recordsPage'
     ]
 
 ];
