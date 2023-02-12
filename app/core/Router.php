@@ -41,10 +41,23 @@ class Router
     public function run()
     {
         if ($this->match()){
-            echo "Route matched";
+            $path = 'app\controllers\\' . $this->params['controller'].'Controller';
+            if (class_exists($path)){
+                $action = $this->params['action']. 'Action';
+                if (method_exists($path,$action)){
+                    $controller = new $path;
+                    $controller->$action();
+                }
+                else{
+                    echo 'Action not found';
+                }
+            }
+            else{
+                echo 'Controller not found ' . $path;
+            }
         }
         else{
-            echo 'Route is not exist';
+            echo 'Route mismatched';
         }
     }
 

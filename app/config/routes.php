@@ -2,12 +2,12 @@
 
 return [
 
-    'genre' => [
-        'controller' => 'genre',
+    'genre/show' => [
+        'controller' => 'Genre',
         'action' => 'show'
     ],
-    'visitors' => [
-        'controller' => 'visitors',
+    'visitors/show' => [
+        'controller' => 'Visitors',
         'action' => 'show'
     ],
 
