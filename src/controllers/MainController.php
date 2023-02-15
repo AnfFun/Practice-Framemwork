@@ -1,14 +1,12 @@
 <?php
 
-namespace app\controllers;
+namespace App\controllers;
 
-use app\core\Controller;
-use app\core\Db;
+use App\core\Controller;
 class MainController extends Controller
 {
     public function homeAction()
     {
-        $db = new Db();
         $this->view->render('Home');
     }
 }

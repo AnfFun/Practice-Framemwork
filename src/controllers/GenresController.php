@@ -1,8 +1,8 @@
 <?php
 
-namespace app\controllers;
+namespace App\controllers;
 
-use app\core\Controller;
+use App\core\Controller;
 
 class GenresController extends Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace App\core;
 
-use app\core\View;
+use App\core\View;
 abstract class Controller
 {
     public $route;

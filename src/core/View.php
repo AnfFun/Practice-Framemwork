@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace App\core;
 
 class View
 {
@@ -18,11 +18,11 @@ class View
 
     public function render($title, $vars = [])
     {
-        if (file_exists('app/views/' . $this->path . '.php')) {
+        if (file_exists('src/views/' . $this->path . '.php')) {
             ob_start();
-            require 'app/views/' . $this->path . '.php';
+            require 'src/views/' . $this->path . '.php';
             $content = ob_get_clean();
-            require 'app/views/Layouts/' . $this->layout . '.php';
+            require 'src/views/Layouts/' . $this->layout . '.php';
         }else{
             echo $this->path . "is not exist";
         }

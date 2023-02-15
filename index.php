@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require 'app/lib/autoload.php';
+require 'src/lib/autoload.php';
 
-use app\core\Router;
+use App\core\Router;
 
 
 $rout = new Router();
