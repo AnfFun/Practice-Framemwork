@@ -21,6 +21,6 @@ return [
     'records' => [
         'controller' => 'Records',
         'action' => 'recordsPage'
-    ]
+    ],
 
 ];
