@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'src/lib/autoload.php';
+require 'App/lib/autoload.php';
 
 use App\core\Router;
 

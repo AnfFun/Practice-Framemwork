@@ -18,11 +18,11 @@ class View
 
     public function render($title, $vars = [])
     {
-        if (file_exists('src/views/' . $this->path . '.php')) {
+        if (file_exists('App/views/' . $this->path . '.php')) {
             ob_start();
-            require 'src/views/' . $this->path . '.php';
+            require 'App/views/' . $this->path . '.php';
             $content = ob_get_clean();
-            require 'src/views/Layouts/' . $this->layout . '.php';
+            require 'App/views/Layouts/' . $this->layout . '.php';
         }else{
             echo $this->path . "is not exist";
         }
