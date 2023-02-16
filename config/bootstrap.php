@@ -12,7 +12,7 @@ function GetEntityManager()
     $proxyDir = null;
     $cache = null;
     $useSimpleAnnotationReader = false;
-    $config = Setup::createAnnotationMetadataConfiguration(array("src"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
+    $config = Setup::createAnnotationMetadataConfiguration(array("App/src"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
 // or if you prefer yaml or XML
 // $config = Setup::createXMLMetadataConfiguration(array(__DIR__."/config/xml"), $isDevMode);
 // $config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), $isDevMode);
