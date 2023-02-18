@@ -1,17 +1,30 @@
 <?php
 
-use App\src\Genre;
+namespace App\src;
+
 use Doctrine\ORM\EntityRepository;
 
 class GenreRepository extends EntityRepository
 {
-    public function addGenre(): void
+    public function save($entity)
     {
-        $entityManager = $this->getEntityManager();
-        $user = new Genre();
-        $user->setName('horror');
-        $entityManager->persist($user);
-        $entityManager->flush();
+        $this->_em->persist($entity);
+        $this->_em->flush();
     }
 
+    public function delete($entity)
+    {
+        $this->_em->remove($entity);
+        $this->_em->flush();
+    }
+
+    public function update($entity)
+    {
+        $this->_em->flush();
+    }
+
+    public function findById($id)
+    {
+        return $this->find($id);
+    }
 }

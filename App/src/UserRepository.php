@@ -1,44 +1,32 @@
 <?php
 
-namespace App\src\Repository;
+namespace App\src;
 
-use App\src\User;
 use Doctrine\ORM\EntityRepository;
 
 class UserRepository extends EntityRepository
 {
-    /**
-     * @param string $name
-     * @param string $phone
-     * @return User
-     */
-    public function createUser(string $name, string $phone): User
+    public function save($entity)
     {
-        $user = new User();
-        $user->setName($name);
-        $user->setPhone($phone);
-
-        $this->getEntityManager()->persist($user);
-        $this->getEntityManager()->flush();
-
-        return $user;
+        $this->_em->persist($entity);
+        $this->_em->flush();
     }
 
-    /**
-     * @param int $id
-     * @return User|null
-     */
-    public function findUserById(int $id): ?User
+    public function delete($entity)
     {
-        return $this->findOneBy(['id' => $id]);
+        $this->_em->remove($entity);
+        $this->_em->flush();
     }
 
-    /**
-     * @param string $name
-     * @return User|null
-     */
-    public function findUserByName(string $name): ?User
+    public function update($entity)
     {
-        return $this->findOneBy(['name' => $name]);
+        $this->_em->flush();
     }
+
+    public function findById($id)
+    {
+        return $this->find($id);
+    }
+
+
 }
